@@ -28,7 +28,7 @@ body {
   visibility: hidden;
   position: relative;
   overflow: hidden;
-} 
+}
 
 .container div.six {
   top: 10vh;
@@ -102,22 +102,15 @@ body {
 .four .text-box {
   width: 600px;
   margin: 0 auto;
-  background: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 16px;
-  padding: 20px;
+  border: none;
+  padding: 12px;
   position: relative;
+  background: transparent;
 }
 
 .text-box p {
   margin: 0;
   text-align: left;
-  color: var(--text-light);
-  font-size: 1.1rem;
-  line-height: 1.5;
 }
 
 .text-box span {
@@ -126,16 +119,12 @@ body {
 
 .text-box .fake-btn {
   position: absolute;
-  right: 15px;
-  bottom: 15px;
-  color: var(--primary);
-  background-color: var(--text-light);
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: transform 0.2s ease;
+  right: 8px;
+  bottom: 8px;
+  color: #fff;
+  background-color: var(--primary);
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
 .five p {
@@ -183,9 +172,9 @@ body {
 .six .hat {
   position: absolute;
   width: 80px;
-  top: -20px;
+  top: 28%;
   left: 54%;
-  filter: drop-shadow(0 5px 5px rgba(0,0,0,0.3));
+  /* filter: drop-shadow(0 5px 5px rgba(0,0,0,0.3)); */
 }
 
 .baloons img {
