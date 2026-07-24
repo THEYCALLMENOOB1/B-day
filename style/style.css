@@ -1,3 +1,10 @@
+:root {
+  --primary: #6E151A; /* dark red */
+  --accent: #000080;  /* navy */
+  --bg: #ffffff;      /* white */
+  --text-dark: #111111;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -5,6 +12,8 @@ html {
 body {
   margin: 0;
   font-family: "Work Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text-dark);
 }
 
 .container {
@@ -42,12 +51,11 @@ body {
 }
 .v-dp{
   border-radius: 10px;
-  border: #1e1e1e solid 1px;
+  border: 2px solid var(--accent);
 }
 .link2{
   text-decoration: none;
-
-  color: black;
+  color: var(--accent);
 }
 .one > img {
   vertical-align: middle;
@@ -68,10 +76,11 @@ body {
 .four .text-box {
   width: 600px;
   margin: 0 auto;
-  border: 3px solid #aaa;
-  border-radius: 5px;
-  padding: 10px;
+  border: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 12px;
   position: relative;
+  background: rgba(255,255,255,0.95);
 }
 
 .text-box p {
@@ -85,12 +94,12 @@ body {
 
 .text-box .fake-btn {
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 8px;
+  bottom: 8px;
   color: #fff;
-  background-color: rgb(21, 161, 237);
-  padding: 5px 8px;
-  border-radius: 3px;
+  background-color: var(--primary);
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
 .five p {
@@ -222,12 +231,14 @@ body {
   font-size: 3em;
   margin: 0;
   text-transform: uppercase;
+  color: var(--accent);
 }
 
 .wish h5 {
   font-weight: lighter;
   font-size: 2rem;
   margin: 10px 0 0;
+  color: var(--primary);
 }
 
 .nine p {
@@ -275,7 +286,7 @@ body {
   }
 
   .text-box .fake-btn {
-    right: 5px;
+    right: 8px;
     bottom: -38px;
   }
 
