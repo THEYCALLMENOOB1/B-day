@@ -1,30 +1,52 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    background-color: #000080; /* navy */
+    height: 100vh;
+    background: linear-gradient(135deg, #000080 0%, #300a20 50%, #6E151A 100%);
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #noButton {
     position: absolute;
     margin-left: 150px;
-    transition: 0.5s;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
 #yesButton {
-    position: absolute;
-    margin-right: 150px;
+    margin-right: 20px;
+    z-index: 10;
 }
 
 .header_text {
-    font-family: 'Nunito';
-    font-size: 40px;
+    font-size: 28px;
     font-weight: bold;
     color: #ffffff;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .buttons {
@@ -33,63 +55,72 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    margin-left: 20px;
+    position: relative;
+    height: 60px;
 }
 
 .btn {
-    background-color: #6E151A; /* dark red */
+    background: rgba(255, 255, 255, 0.15);
     color: white;
-    padding: 15px 32px;
+    padding: 15px 35px;
     text-align: center;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    border: none;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background: #6E151A;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    border-color: #6E151A;
+}
+
+#yesButton:hover {
+    background: #000080;
+    border-color: #000080;
 }
 
 .gif_container {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px 0;
 }
 
-@media only screen and (max-width: 320px) and (max-height: 568px) {
-    body {
-        height: 100vh;
-    }
+.gif_container img {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    max-width: 100%;
+    height: auto;
+}
 
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+    
     .header_text {
         font-size: 20px;
     }
 
-    img {
-        height: 60vh;
+    .gif_container img {
+        height: 40vh;
     }
 
     .btn {
-        padding: 10px 18px;
-        font-size: 12px;
+        padding: 12px 25px;
+        font-size: 16px;
     }
-}
-
-@media only screen and (max-width: 414px) and (max-height: 736px) {
-    body {
-        height: 90vh;
-    }
-
-    .header_text {
-        font-size: 28px;
-    }
-
-    img {
-        height: 60vh;
-    }
-
-    .btn {
-        padding: 15px 25px;
-        font-size: 14px;
+    
+    #noButton {
+        margin-left: 100px;
     }
 }
