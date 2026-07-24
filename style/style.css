@@ -28,7 +28,7 @@ body {
   visibility: hidden;
   position: relative;
   overflow: hidden;
-}
+} 
 
 .container div.six {
   top: 10vh;
